@@ -40,7 +40,7 @@
                 <a href="resume.html">RESUME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="gallery.html">GALLERY</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="article.html">ARTICLE</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="guestbook.html" style="color:#38BDF8; text-decoration:none; border-bottom:2px solid #1E90FF; padding-bottom:6px;">GUEST&nbsp;BOOK</a>
+                <a href="guestbook.html"><font color="#38BDF8"><b><u>GUEST&nbsp;BOOK</u></b></font></a>
             </font>
         </td>
 
@@ -66,78 +66,37 @@
 
 <!-- =====================================================
      3. FORM GUEST BOOK
-     Form dikirim ke layanan Web3Forms (https://web3forms.com).
-     Access Key milikmu sudah terpasang di bawah, jadi setiap pesan yang dikirim
-     akan masuk ke email yang kamu daftarkan di Web3Forms.
      ===================================================== -->
-<div style="width:90%; max-width:560px; background-color:#0B0F14; border:2px solid #1E90FF; border-radius:16px; box-shadow:0 0 25px rgba(30,144,255,0.45); padding:32px 30px; text-align:left; box-sizing:border-box;">
+<table width="90%" bgcolor="#0B0F14" border="2" bordercolor="#1E90FF" cellpadding="30" cellspacing="0">
+    <tr>
+        <td align="left">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- Access Key Web3Forms -->
+                <input type="hidden" name="access_key" value="3500cde2-19be-49ee-b46f-c6d04c71c334">
+                <input type="hidden" name="subject" value="Pesan Baru dari Guest Book Nadz">
+                <input type="hidden" name="from_name" value="Guest Book Nadz">
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+                <font face="Verdana, sans-serif" size="2" color="#38BDF8"><b>Nama Lengkap</b></font><br>
+                <input type="text" name="nama" placeholder="Masukkan nama kamu" required size="40"><br><br>
 
-        <!-- ===== Data tersembunyi untuk Web3Forms ===== -->
-        <!-- Access Key Web3Forms milikmu (sudah terpasang) -->
-        <input type="hidden" name="access_key" value="3500cde2-19be-49ee-b46f-c6d04c71c334">
-        <!-- Judul email yang akan kamu terima -->
-        <input type="hidden" name="subject" value="Pesan Baru dari Guest Book Nadz">
-        <!-- Nama pengirim yang tampil di email -->
-        <input type="hidden" name="from_name" value="Guest Book Nadz">
-        <!-- Kotak anti-spam (dibiarkan tersembunyi dan kosong) -->
-        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+                <font face="Verdana, sans-serif" size="2" color="#38BDF8"><b>Email</b></font><br>
+                <input type="email" name="email" placeholder="contoh@email.com" required size="40"><br><br>
 
-        <!-- ===== 1. Nama ===== -->
-        <div style="margin-bottom:22px;">
-            <label for="nama" style="display:block; color:#38BDF8; font-family:Verdana, sans-serif; font-size:13px; font-weight:bold; margin-bottom:8px;">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required
-                   style="width:100%; box-sizing:border-box; background-color:#050505; color:#FFFFFF; border:1px solid #1E90FF; border-radius:8px; padding:12px 14px; font-family:Verdana, sans-serif; font-size:13px;">
-        </div>
+                <font face="Verdana, sans-serif" size="2" color="#38BDF8"><b>Jenis Kelamin</b></font><br>
+                <font face="Verdana, sans-serif" size="2" color="#FFFFFF">
+                    <input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki &nbsp;&nbsp;
+                    <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                </font><br><br>
 
-        <!-- ===== 2. Email ===== -->
-        <div style="margin-bottom:22px;">
-            <label for="email" style="display:block; color:#38BDF8; font-family:Verdana, sans-serif; font-size:13px; font-weight:bold; margin-bottom:8px;">Email</label>
-            <input type="email" id="email" name="email" placeholder="contoh@email.com" required
-                   style="width:100%; box-sizing:border-box; background-color:#050505; color:#FFFFFF; border:1px solid #1E90FF; border-radius:8px; padding:12px 14px; font-family:Verdana, sans-serif; font-size:13px;">
-        </div>
+                <font face="Verdana, sans-serif" size="2" color="#38BDF8"><b>Pesan / Kesan</b></font><br>
+                <textarea name="pesan" rows="6" cols="42" placeholder="Tulis pesan atau kesanmu di sini..." required></textarea><br><br>
 
-        <!-- ===== 3. Jenis Kelamin (radio button) ===== -->
-        <div style="margin-bottom:22px;">
-            <div style="color:#38BDF8; font-family:Verdana, sans-serif; font-size:13px; font-weight:bold; margin-bottom:10px;">Jenis Kelamin</div>
-
-            <label for="laki" style="color:#FFFFFF; font-family:Verdana, sans-serif; font-size:13px; margin-right:26px; cursor:pointer;">
-                <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required style="accent-color:#1E90FF;">
-                Laki-laki
-            </label>
-
-            <label for="perempuan" style="color:#FFFFFF; font-family:Verdana, sans-serif; font-size:13px; cursor:pointer;">
-                <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" style="accent-color:#1E90FF;">
-                Perempuan
-            </label>
-        </div>
-
-        <!-- ===== 4. Pesan / Kesan (textarea) ===== -->
-        <div style="margin-bottom:28px;">
-            <label for="pesan" style="display:block; color:#38BDF8; font-family:Verdana, sans-serif; font-size:13px; font-weight:bold; margin-bottom:8px;">Pesan / Kesan</label>
-            <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis pesan atau kesanmu di sini..." required
-                      style="width:100%; box-sizing:border-box; background-color:#050505; color:#FFFFFF; border:1px solid #1E90FF; border-radius:8px; padding:12px 14px; font-family:Verdana, sans-serif; font-size:13px; line-height:1.6; resize:vertical;"></textarea>
-        </div>
-
-        <!-- ===== Tombol Submit dan Reset ===== -->
-        <div>
-            <!-- Tombol kirim (biru penuh) -->
-            <button type="submit"
-                    style="background-color:#1E90FF; color:#FFFFFF; border:2px solid #1E90FF; border-radius:6px; padding:12px 26px; font-family:Verdana, sans-serif; font-size:13px; font-weight:bold; cursor:pointer; box-shadow:0 0 14px rgba(30,144,255,0.5); margin-right:10px;">
-                Kirim Pesan
-            </button>
-
-            <!-- Tombol reset (garis biru) -->
-            <button type="reset"
-                    style="background-color:transparent; color:#FFFFFF; border:2px solid #1E90FF; border-radius:6px; padding:12px 26px; font-family:Verdana, sans-serif; font-size:13px; cursor:pointer;">
-                Reset
-            </button>
-        </div>
-
-    </form>
-
-</div>
+                <input type="submit" value="Kirim Pesan">
+                <input type="reset" value="Reset">
+            </form>
+        </td>
+    </tr>
+</table>
 
 <br><br>
 

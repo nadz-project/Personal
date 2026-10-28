@@ -39,7 +39,7 @@
         <!-- Menu links: HOME berwarna biru karena sedang dibuka -->
         <td align="right">
             <font face="Verdana, sans-serif" size="2">
-                <a href="index.html" style="color:#38BDF8; text-decoration:none; border-bottom:2px solid #1E90FF; padding-bottom:6px;">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index.html"><font color="#38BDF8"><b><u>HOME</u></b></font></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="about.html">ABOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="resume.html">RESUME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="gallery.html">GALLERY</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -69,9 +69,17 @@
         <td width="55%" align="left" valign="middle">
 
             <!-- Status teks berjalan (marquee) -->
-            <marquee behavior="scroll" direction="left" scrollamount="5" style="display:block; width:100%; box-sizing:border-box; background-color:rgba(30,144,255,0.15); border:1px solid rgba(56,189,248,0.4); border-radius:20px; padding:10px 18px; color:#38BDF8; font-family:'Courier New', Consolas, monospace; font-size:14px;">
-                🌊Current Status: Coding inside Unlimited Void... | 🚀 Welcome to Nadz Space! |
-            </marquee>
+            <table width="100%" bgcolor="#0B0F14" border="1" bordercolor="#1E90FF" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td>
+                        <marquee behavior="scroll" direction="left" scrollamount="5">
+                            <font face="Courier New, Consolas, monospace" size="2" color="#38BDF8">
+                                🌊Current Status: Coding inside Unlimited Void... | 🚀 Welcome to Nadz Space! |
+                            </font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
 
             <br>
 
@@ -201,17 +209,21 @@
             </table>
 
             <!-- Pemutar audio di bawah foto -->
-            <!-- Ganti "ost.mp3" dengan file musikmu (taruh di folder yang sama dengan index.html) -->
-            <!-- Lebar kotak (248px) sengaja sama dengan lebar bingkai foto supaya rata dan rapi -->
-            <div style="width:248px; box-sizing:border-box; margin:10px auto 0 auto; padding:8px 10px 6px 10px; background-color:#111827; border:2px solid #1E90FF; border-radius:14px; text-align:center; box-shadow:0 0 14px rgba(30,144,255,0.35);">
-                <div style="color:#38BDF8; font-family:'Courier New', Consolas, monospace; font-size:11px; white-space:nowrap; margin-bottom:4px;">
-                    🎵 Now Playing: Jujutsu Kaisen Gojo Welcome
-                </div>
-                <audio controls style="width:100%; height:34px; color-scheme:dark;">
-                    <source src="images/gojo.wav" type="audio/wav">
-                    Browser kamu tidak mendukung pemutar audio.
-                </audio>
-            </div>
+            <br>
+            <table width="248" bgcolor="#111827" border="2" bordercolor="#1E90FF" cellpadding="8" cellspacing="0">
+                <tr>
+                    <td align="center">
+                        <font face="Courier New, Consolas, monospace" size="1" color="#38BDF8">
+                            🎵 Now Playing: Gojo Welcome
+                        </font>
+                        <br><br>
+                        <audio controls>
+                            <source src="images/gojo.wav" type="audio/wav">
+                            Browser kamu tidak mendukung pemutar audio.
+                        </audio>
+                    </td>
+                </tr>
+            </table>
 
         </td>
     </tr>
